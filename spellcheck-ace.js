@@ -14,7 +14,7 @@ DEPENDENCIES:
 
 USE:
 	- Add in some file on your site all the necessary PHP-functions from inFlowia Lab. for this script.
-	- In the add_to_usr_dict.php file fix the constant:
+	- In the add-to-usr-dict.php file fix the constant:
 		DEPS_PATH - path to the file where the doc_root() function is set
 	- Ensure accessibility of all the necessary JS functions from inFlowia Lab. for this script.
 	- Connect jQuery, typo.js and ace.js to pages that will use this plugin.
@@ -311,7 +311,7 @@ class Spellcheck_ace{
 		var word = word.replace(/[^\p{Alpha}\-']/ug, ''); // clearing the selection so as not to write something invalid
 		$.ajax({
 			type: 'POST',
-			url: Spellcheck_ace.this_dir + 'add_to_usr_dict.php',
+			url: Spellcheck_ace.this_dir + 'add-to-usr-dict.php',
 			data: {word}
 		}).done(()=>{
 			// reloading the user dictionary and re-checking the spelling.
