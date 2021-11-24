@@ -1,4 +1,4 @@
-# Ace Editor Spellcheck - Multilang
+# Ace Editor Spellcheck - MultiLang
 This is a fork of the [original 'Ace Editor Spellcheck' plugin by Christopher Swenson](https://github.com/swenson/ace_spell_check_js)  
 подробнее на русском (ссылка станет доступна после публикации статьи)
 ![Screenshot](screenshot.png)
