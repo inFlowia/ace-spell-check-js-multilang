@@ -236,7 +236,7 @@ class Spellcheck_ace{
 
 	enable_spellcheck() {
 		this.spellcheckEnabled = true
-		ace.edit(this._editor).getSession().on('change', function(e) {
+		ace.edit(this._editor).getSession().on('change', (e)=>{
 			if (this.spellcheckEnabled) {
 				this._contents_modified = true;
 				this.spell_check();
