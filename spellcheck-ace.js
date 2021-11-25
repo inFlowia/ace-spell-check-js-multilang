@@ -17,7 +17,7 @@ USE:
 	- Add in some file on your site all the necessary PHP-functions from inFlowia Lab. for this script. Look for them in the repository at https://github.com/inFlowia/deps .
 	- In the add-to-usr-dict.php file fix the constant:
 		DEPS_PATH - path to the file where the doc_root() function is set
-	- Ensure accessibility of all the necessary JS functions from inFlowia Lab. for this script.  Look for them in the repository at https://github.com/inFlowia/deps .
+	- Ensure accessibility of all the necessary JS functions from inFlowia Lab. for this script. Look for them in the repository at https://github.com/inFlowia/deps .
 	- Connect jQuery, typo.js and ace.js to pages that will use this plugin.
 	- Modify the array so that the paths to all necessary dictionaries are correct.
 		There are no requirements for the lang field. You can specify in this field any desired designation of the dictionary.
@@ -34,8 +34,7 @@ USE:
 		You can call this right after initializing the object. In fact, the check will turn on only after all dictionaries are loaded.
 	- To disable spell checking, call spellcheck_ace.disable_spellcheck();
 	- To add word in users dictionary, call spellcheck_ace.add_to_usr_dict(desired_word);
-	- To get an array of suggestions for misspelled word, call:
-	spellcheck_ace.suggest_word_for_misspelled(misspelledWord);
+	- To get an array of suggestions for misspelled word, call: spellcheck_ace.suggest_word_for_misspelled(misspelled_word);
 
 CHANGES:
 	0.1 (differences from the original plugin)
@@ -55,6 +54,7 @@ CHANGES:
 FLAWS:
 	- Disabling spell check simply hides the text decoration but does not disable the editor's change handler.
 	- It would be nice to separate the user dictionary from typo and check against it with your own method, this would allow you to add arbitrary words to it, without hunspell and typo.js restrictions.
+	- If a word is adjacent to a single quotation mark, this word will most likely be marked as incorrect, since the quotation mark is included in the word.
 	- The current word-splitting method in _misspelled() causes words equal to the empty string to appear in the array.
 */
 
